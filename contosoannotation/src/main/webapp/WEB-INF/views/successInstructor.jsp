@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration Confirmation Page</title>
+<title>Instructor Registration Confirmation</title>
 </head>
 <body>
 	Message : ${message}
 	<br />
 	<br /> Go back to
-	<a href="<c:url value='/Student/list' />">List of All Students</a>
+	<a href="<c:url value='/Instructor/list' />">List of All Instructors</a>
 
 </body>
 
