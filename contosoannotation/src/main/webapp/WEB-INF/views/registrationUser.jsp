@@ -7,7 +7,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Employee Registration Form</title>
+<title>Role Registration Form</title>
 
 <style>
 .error {
@@ -28,8 +28,6 @@
 				<td><form:input path="roleName" id="roleName" /></td>
 				<td><form:errors path="roleName" cssClass="error" /></td>
 			</tr>
-
-
 			<tr>
 				<td><label for="description">Description: </label></td>
 				<td><form:input path="description" id="description" /></td>
