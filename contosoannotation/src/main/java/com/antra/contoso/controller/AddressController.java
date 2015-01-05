@@ -8,26 +8,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.antra.contoso.domain.Address;
 import com.antra.contoso.service.AddressService;
 
-
-
 @Controller
 @RequestMapping("/Address")
-public class AddressController 
-{
+public class AddressController {
+
 	@Autowired
 	AddressService addressService;
 	
 	@RequestMapping(value= {"/","/list"}, method=RequestMethod.GET)
 	public String listAddresses(ModelMap model) {
-		List<Address> addresses = addressService.findAllAddress();
-		//System.out.println(addresses.get(0).getCity());
-		model.addAttribute("addresses",addresses);
+		List<Address> addresss = addressService.findAllAddresses();
+		model.addAttribute("addresss",addresss);
 		return "allAddresses";
 	}
 	
@@ -35,16 +33,23 @@ public class AddressController
 	public String newAddress(ModelMap model) {
 		Address address = new Address();
 		model.addAttribute("address",address);
-		return "registerAddress";
+		return "registrationAddress";
 	}
 	
 	@RequestMapping(value= {"/save"},method=RequestMethod.POST)
 	public String saveAddress(@Valid Address address, BindingResult bindingResult, ModelMap model) {
 		if(bindingResult.hasErrors()) {
-			return "registerAddress";
+			return "registrationAddress";
 		}
 		addressService.saveAddress(address);
-		model.addAttribute("message","Address in city ,"+address.getCity()+" , has been successfully created.");
-		return "successA";
+		model.addAttribute("message","Address "+address.getAddressId()+" has been successfully created.");
+		return "successAddress";
 	}
+	
+	@RequestMapping(value= {"/{addressId}"},method=RequestMethod.DELETE)
+	public String deleteAddress(@PathVariable int addressId) {
+		addressService.deleteAddressById(addressId);
+		return "redirect:/Address/list";
+	}
+	
 }

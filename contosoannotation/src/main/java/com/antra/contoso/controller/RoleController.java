@@ -33,23 +33,24 @@ public class RoleController {
 	public String newRole(ModelMap model) {
 		Role role = new Role();
 		model.addAttribute("role",role);
-		return "registration";
+		return "registrationRole";
 	}
 	
+	//TODO: change dispaly message accordingly.
 	@RequestMapping(value= {"/save"},method=RequestMethod.POST)
 	public String saveRole(@Valid Role role, BindingResult bindingResult, ModelMap model) {
 		if(bindingResult.hasErrors()) {
-			return "registration";
+			return "registrationRole";
 		}
 		roleService.saveRole(role);
-		model.addAttribute("message","Role ,"+role.getRoleName()+" , has been successfully created.");
-		return "successR";
+		model.addAttribute("message","Role "+role.getRoleName()+" has been successfully created.");
+		return "successRole";
 	}
 	
 	@RequestMapping(value= {"/{roleId}"},method=RequestMethod.DELETE)
 	public String deleteRole(@PathVariable int roleId) {
 		roleService.deleteRoleById(roleId);
-		return "redirect:/list";
+		return "redirect:/Role/list";
 	}
 	
 }
