@@ -7,14 +7,14 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.antra.contoso.dao.AddressDao;
+import com.antra.contoso.dao.AddressDAO;
 import com.antra.contoso.domain.Address;
 @Service("addressService")
 @Transactional
 public class AddressServiceImpl implements AddressService {
 	
 	@Autowired
-	private AddressDao addressDao;
+	private AddressDAO addressDao;
 
 	@Override
 	public void saveAddress(Address address) {

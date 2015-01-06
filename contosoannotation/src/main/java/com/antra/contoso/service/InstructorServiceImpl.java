@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.antra.contoso.dao.InstructorDao;
+import com.antra.contoso.dao.InstructorDAO;
 import com.antra.contoso.domain.Instructor;
 
 @Service("instructorService")
@@ -16,7 +16,7 @@ import com.antra.contoso.domain.Instructor;
 public class InstructorServiceImpl implements InstructorService {
 
 	@Autowired
-	private InstructorDao instructorDao;
+	private InstructorDAO instructorDao;
 	
 	@Override
 	public void saveInstructor(Instructor instructor) {
@@ -31,7 +31,7 @@ public class InstructorServiceImpl implements InstructorService {
 	}
 
 	@Override
-	public void deleteInstructorBtId(int instructorId) {
+	public void deleteInstructorById(int instructorId) {
 		instructorDao.deleteInstructorById(instructorId);
 	}
 

@@ -6,7 +6,7 @@ import com.antra.contoso.domain.OnlineCourse;
 
 public interface OnlineCourseService {
 	
-	void saveInlineCourse(OnlineCourse onlineCourse);
+	void saveOnlineCourse(OnlineCourse onlineCourse);
 	
 	List<OnlineCourse> findAllOnlineCourses();
 	

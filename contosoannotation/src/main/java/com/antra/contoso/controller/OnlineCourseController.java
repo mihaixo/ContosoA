@@ -43,7 +43,7 @@ public class OnlineCourseController {
 			return "registrationOnlineCourse";
 		}
 		onlineCourseService.saveOnlineCourse(onlineCourse);
-		model.addAttribute("message","OnlineCourse "+onlineCourse.getOnlineCourseId()+" has been successfully created.");
+		model.addAttribute("message","OnlineCourse "+onlineCourse.getOnlineCourseID()+" has been successfully created.");
 		return "successOnlineCourse";
 	}
 	

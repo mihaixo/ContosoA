@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.antra.contoso.dao.StudentDao;
+import com.antra.contoso.dao.StudentDAO;
 import com.antra.contoso.domain.Student;
 
 @Service("studentService")
@@ -15,7 +15,7 @@ import com.antra.contoso.domain.Student;
 public class StudentServiceImpl implements StudentService {
 	
 	@Autowired
-	private StudentDao studentDao;
+	private StudentDAO studentDao;
 
 	@Override
 	public void saveStudent(Student student) {

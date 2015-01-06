@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.antra.contoso.dao.OnsiteCourseDao;
+import com.antra.contoso.dao.OnsiteCourseDAO;
 import com.antra.contoso.domain.OnsiteCourse;
 
 @Service("onsiteCourseSerice")
@@ -15,7 +15,7 @@ import com.antra.contoso.domain.OnsiteCourse;
 public class OnsiteCourseServiceImpl implements OnsiteCourseService {
 
 	@Autowired
-	private OnsiteCourseDao onsiteCourseDao;
+	private OnsiteCourseDAO onsiteCourseDao;
 	
 	@Override
 	public void saveOnsiteCourse(OnsiteCourse onsiteCourse) {
@@ -30,7 +30,7 @@ public class OnsiteCourseServiceImpl implements OnsiteCourseService {
 
 	@Override
 	public void deleteOnsiteCourseById(int onsiteCourseId) {
-		onsiteCourseDao.deleteOnsiteCoursesById(onsiteCourseId);
+		onsiteCourseDao.deleteOnsiteCourseById(onsiteCourseId);
 
 	}
 

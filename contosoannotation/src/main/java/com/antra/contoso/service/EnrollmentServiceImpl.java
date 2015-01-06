@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.antra.contoso.dao.EnrollmentDao;
+import com.antra.contoso.dao.EnrollmentDAO;
 import com.antra.contoso.domain.Enrollment;
 
 @Service("enrollmentService")
@@ -15,7 +15,7 @@ import com.antra.contoso.domain.Enrollment;
 public class EnrollmentServiceImpl implements EnrollmentService {
 
 	@Autowired
-	private EnrollmentDao enrollmentDao;
+	private EnrollmentDAO enrollmentDao;
 	@Override
 	public void saveEnrollment(Enrollment enrollment) {		
 		enrollmentDao.saveEnrollment(enrollment);

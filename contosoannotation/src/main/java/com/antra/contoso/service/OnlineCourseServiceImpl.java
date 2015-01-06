@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.antra.contoso.dao.OnlineCourseDao;
+import com.antra.contoso.dao.OnlineCourseDAO;
 import com.antra.contoso.domain.OnlineCourse;
 
 @Service("onlinecourseService")
@@ -15,10 +15,10 @@ import com.antra.contoso.domain.OnlineCourse;
 public class OnlineCourseServiceImpl implements OnlineCourseService {
 
 	@Autowired
-	private OnlineCourseDao onlineCourseDao;
+	private OnlineCourseDAO onlineCourseDao;
 	
 	@Override
-	public void saveInlineCourse(OnlineCourse onlineCourse) {
+	public void saveOnlineCourse(OnlineCourse onlineCourse) {
 		onlineCourseDao.saveOnlineCourse(onlineCourse);
 
 	}

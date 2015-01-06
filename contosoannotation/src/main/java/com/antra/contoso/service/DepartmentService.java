@@ -8,8 +8,8 @@ public interface DepartmentService {
 	
 	void saveDepartment (Department department);
 	
-	List<Department> findAlldepartments();
+	List<Department> findAllDepartments();
 	
-	void deleteDepartmentByid(int departmentId);
+	void deleteDepartmentById(int departmentId);
 
 }
