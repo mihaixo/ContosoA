@@ -7,7 +7,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>User Registration Form</title>
+<title>Role Registration Form</title>
 
 <style>
 .error {
@@ -21,36 +21,28 @@
 
 	<h2>User Creation Form</h2>
 
-	<form:form method="POST" modelAttribute="user">
+	<form:form method="POST" modelAttribute="role">
 		<table>
 			<tr>
-				<td><label for="name">User Name: </label></td>
-				<td><form:input path="userName" id="userName" /></td>
-				<td><form:errors path="userName" cssClass="error" /></td>
+				<td><label for="name">Role Name: </label></td>
+				<td><form:input path="roleName" id="roleName" /></td>
+				<td><form:errors path="roleName" cssClass="error" /></td>
 			</tr>
+
+
 			<tr>
-				<td><label for="passwordHash">Password Hash: </label></td>
-				<td><form:input path="passwordHash" id="passwordHash" /></td>
-				<td><form:errors path="passwordHash" cssClass="error" /></td>
-			</tr>
-			<tr>
-				<td><label for="passwordSalt">Password Salt: </label></td>
-				<td><form:input path="passwordSalt" id="passwordSalt" /></td>
-				<td><form:errors path="passwordSalt" cssClass="error" /></td>
-			</tr>
-			<tr>
-				<td><label for="email">Email: </label></td>
-				<td><form:input path="email" id="email" /></td>
-				<td><form:errors path="email" cssClass="error" /></td>
+				<td><label for="description">Description: </label></td>
+				<td><form:input path="description" id="description" /></td>
+				<td><form:errors path="description" cssClass="error" /></td>
 			</tr>
 
 			<tr>
-				<td colspan="3"><input type="submit" value="Create User" /></td>
+				<td colspan="3"><input type="submit" value="Create Role" /></td>
 			</tr>
 		</table>
 	</form:form>
 	<br />
 	<br /> Go back to
-	<a href="<c:url value='/User/list' />">List of All Users</a>
+	<a href="<c:url value='/Role/list' />">List of All Roles</a>
 </body>
 </html>
