@@ -9,10 +9,11 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.antra.contoso.domain.Address;
 import com.antra.contoso.domain.Role;
 
-@Repository("roleDao")
-public class RoleDAOImpl implements RoleDAO {
+@Repository("addressDao")
+public class AddressDAOImpl implements AddressDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -23,24 +24,24 @@ public class RoleDAOImpl implements RoleDAO {
 	}
 	
 	@Override
-	public void saveRole(Role role) {
-		getSession().persist(role);
-
+	public void saveAddress(Address address) 
+	{
+		getSession().persist(address);
 	}
 
 	@Override
-	public List<Role> findAllRoles() {
-		Criteria criteria = getSession().createCriteria(Role.class);
-		return (List<Role>) criteria.list();
+	public List<Address> findAllAddresses() 
+	{
+		Criteria criteria = getSession().createCriteria(Address.class);
+		return (List<Address>) criteria.list();
 	}
 
 	@Override
-	public void deleteRoleById(int roleId) {
-		Query query = getSession().createSQLQuery("delete from ROLE where role_id = :id");
-		query.setInteger("id", roleId);
+	public void deleteAddressById(int addressId) 
+	{
+		Query query = getSession().createSQLQuery("delete from ADDRESS where ADDRESS_ID = :id");
+		query.setInteger("id", addressId);
 		query.executeUpdate();
-		//getSession().delete(getSession().get(Role.class, roleId));
-
 	}
 
 }

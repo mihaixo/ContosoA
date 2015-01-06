@@ -9,11 +9,13 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.antra.contoso.domain.Course;
 import com.antra.contoso.domain.Role;
 
-@Repository("roleDao")
-public class RoleDAOImpl implements RoleDAO {
-
+@Repository
+public class CourseDAOImpl implements CourseDAO {
+	
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 	
@@ -21,25 +23,24 @@ public class RoleDAOImpl implements RoleDAO {
 		Session session = sessionFactory.getCurrentSession();
 		return session;
 	}
-	
+
 	@Override
-	public void saveRole(Role role) {
-		getSession().persist(role);
+	public void saveCourse(Course course) {
+		getSession().persist(course);
 
 	}
 
 	@Override
-	public List<Role> findAllRoles() {
-		Criteria criteria = getSession().createCriteria(Role.class);
-		return (List<Role>) criteria.list();
+	public List<Course> findAllCourses() {
+		Criteria criteria = getSession().createCriteria(Course.class);
+		return (List<Course>) criteria.list();
 	}
 
 	@Override
-	public void deleteRoleById(int roleId) {
-		Query query = getSession().createSQLQuery("delete from ROLE where role_id = :id");
-		query.setInteger("id", roleId);
+	public void deleteCourseById(int courseId) {
+		Query query = getSession().createSQLQuery("delete from COURSE where role_id = :id");
+		query.setInteger("id", courseId);
 		query.executeUpdate();
-		//getSession().delete(getSession().get(Role.class, roleId));
 
 	}
 

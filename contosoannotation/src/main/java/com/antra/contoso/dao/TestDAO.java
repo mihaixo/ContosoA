@@ -38,7 +38,7 @@ public class TestDAO {
 	@Autowired
 	OnsiteCourseDAO onsiteCourse;
 	@Autowired
-	RoleDao role;
+	RoleDAO role;
 	@Autowired
 	UserDAO user;
 	public TestDAO()
