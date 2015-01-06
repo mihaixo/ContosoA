@@ -8,7 +8,7 @@ public interface AddressService {
 	
 	void saveAddress(Address address);
 	
-	List<Address> findAllAddress();
+	List<Address> findAllAddresses();
 	
 	void deleteAddressById(int addressId);
 

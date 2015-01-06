@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.antra.contoso.domain.Role;
 
 @Repository("roleDao")
-public class RoleDaoImpl implements RoleDao {
+public class RoleDAOImpl implements RoleDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;

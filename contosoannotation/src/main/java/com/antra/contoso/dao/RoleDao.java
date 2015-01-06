@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.antra.contoso.domain.Role;
 
-public interface RoleDao {
+public interface RoleDAO {
 	
 	void saveRole(Role role);
 	
