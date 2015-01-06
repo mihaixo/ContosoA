@@ -9,8 +9,16 @@
 </head>
 <body>
 <h1>Home Page!</h1>
-<a href="<c:url value='/Student/list' />">Student</a>
-<a href="<c:url value='/Address/list' />">Address</a>
-<a href="<c:url value='/Role/list' />">Role</a>
+<p><a href="<c:url value='/Address/list' />">Address</a></p>
+<p><a href="<c:url value='/Administrator/list' />">Administrator</a></p>
+<p><a href="<c:url value='/Course/list' />">Course</a></p>
+<p><a href="<c:url value='/Department/list' />">Department</a></p>
+<p><a href="<c:url value='/Enrollment/list' />">Enrollment</a></p>
+<p><a href="<c:url value='/Instructor/list' />">Instructor</a></p>
+<p><a href="<c:url value='/OnlineCourse/list' />">OnlineCourse</a></p>
+<p><a href="<c:url value='/OnsiteCourse/list' />">OnsiteCourse</a></p>
+<p><a href="<c:url value='/Role/list' />">Role</a></p>
+<p><a href="<c:url value='/Student/list' />">Student</a></p>
+<p><a href="<c:url value='/User/list' />">User</a></p>
 </body>
 </html>
