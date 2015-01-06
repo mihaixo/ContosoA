@@ -24,8 +24,8 @@ public class AddressController {
 	
 	@RequestMapping(value= {"/","/list"}, method=RequestMethod.GET)
 	public String listAddresses(ModelMap model) {
-		List<Address> addresss = addressService.findAllAddresses();
-		model.addAttribute("addresss",addresss);
+		List<Address> addresses = addressService.findAllAddresses();
+		model.addAttribute("addresses",addresses);
 		return "allAddresses";
 	}
 	

@@ -38,6 +38,11 @@
 				<td><form:input path="startDate" id="startDate" /></td>
 				<td><form:errors path="startDate" cssClass="error" /></td>
 			</tr>
+			<tr>
+				<td><label for="administratorId">Start Date: </label></td>
+				<td><form:input path="administratorId" id="administratorId" /></td>
+				<td><form:errors path="administratorId" cssClass="error" /></td>
+			</tr>
 
 			<tr>
 				<td colspan="3"><input type="submit" value="Create Department" /></td>

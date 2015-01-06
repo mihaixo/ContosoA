@@ -43,9 +43,9 @@
 			</tr>
 			
 			<tr>
-				<td><label for="zipcode">Zipcode: </label></td>
-				<td><form:input path="zipcode" id="zipcode" /></td>
-				<td><form:errors path="zipcode" cssClass="error" /></td>
+				<td><label for="zipCode">Zipcode: </label></td>
+				<td><form:input path="zipCode" id="zipCode" /></td>
+				<td><form:errors path="zipCode" cssClass="error" /></td>
 			</tr>
 
 			<tr>
