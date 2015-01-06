@@ -2,14 +2,14 @@ package com.antra.contoso.service;
 
 import java.util.List;
 
-import com.antra.contoso.domain.Role;
+import com.antra.contoso.domain.Instructor;
 
-public interface InstructorService 
-{
-	void saveRole(Role role);
+public interface InstructorService {
 	
-	List<Role> findAllRoles();
+	void saveInstructor(Instructor instructor);
 	
-	void deleteRoleById(int roleId);
+	List<Instructor> findAllInstructors();
+	
+	void deleteInstructorBtId(int instructorid);
 
 }

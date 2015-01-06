@@ -4,9 +4,9 @@ import java.util.List;
 
 import com.antra.contoso.domain.Address;
 
-public interface AddressService 
-{
-void saveAddress(Address address);
+public interface AddressService {
+	
+	void saveAddress(Address address);
 	
 	List<Address> findAllAddress();
 	

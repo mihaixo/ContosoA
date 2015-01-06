@@ -1,15 +1,14 @@
 package com.antra.contoso.service;
 
+import com.antra.contoso.domain.Student;
 import java.util.List;
 
-import com.antra.contoso.domain.Student;
-
-public interface StudentService 
-{
+public interface StudentService {
+	
 	void saveStudent(Student student);
 	
-	List<Student> findAllStudent();
+	List<Student> findAllStudents();
 	
-	void deleteStudentById(int studentId);
+	int deleteStudentById(int studentId);
 
 }
