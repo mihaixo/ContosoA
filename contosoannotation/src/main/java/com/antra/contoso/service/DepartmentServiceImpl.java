@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.antra.contoso.dao.DepartmentDao;
+import com.antra.contoso.dao.DepartmentDAO;
 import com.antra.contoso.domain.Department;
 
 @Service("departmentSerive")
@@ -15,7 +15,7 @@ import com.antra.contoso.domain.Department;
 public class DepartmentServiceImpl implements DepartmentService {
 
 	@Autowired
-	private DepartmentDao departmentDao;
+	private DepartmentDAO departmentDao;
 	
 	@Override
 	public void saveDepartment(Department department) {
@@ -24,14 +24,14 @@ public class DepartmentServiceImpl implements DepartmentService {
 	}
 
 	@Override
-	public List<Department> findAlldepartments() {
+	public List<Department> findAllDepartments() {
 		List<Department> departmentList = departmentDao.findAllDepartments();
 		return departmentList;
 	}
 
 	@Override
-	public void deleteDepartmentByid(int departmentId) {
-		departmentDao.deleteDepartmentsById(departmentId);
+	public void deleteDepartmentById(int departmentId) {
+		departmentDao.deleteDepartmentById(departmentId);
 	}
 
 }

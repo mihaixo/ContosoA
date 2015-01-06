@@ -43,7 +43,7 @@ public class OnsiteCourseController {
 			return "registrationOnsiteCourse";
 		}
 		onsiteCourseService.saveOnsiteCourse(onsiteCourse);
-		model.addAttribute("message","OnsiteCourse "+onsiteCourse.getOnsiteCourseId()+" has been successfully created.");
+		model.addAttribute("message","OnsiteCourse "+onsiteCourse.getOnsiteCourseID()+" has been successfully created.");
 		return "successOnsiteCourse";
 	}
 	

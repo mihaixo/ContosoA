@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.antra.contoso.dao.AdministratorDao;
+import com.antra.contoso.dao.AdministratorDAO;
 import com.antra.contoso.domain.Administrator;
 
 
@@ -16,7 +16,7 @@ import com.antra.contoso.domain.Administrator;
 public class AdministratorServiceImpl implements AdministratorService {
 
 	@Autowired
-	private AdministratorDao administratorDao;
+	private AdministratorDAO administratorDao;
 	
 	@Override
 	public void saveAdministrator(Administrator administrator) {
@@ -32,7 +32,7 @@ public class AdministratorServiceImpl implements AdministratorService {
 
 	@Override
 	public void deleteAdministratorById(int administratorId) {
-		administratorDao.deleteAdministratorsById(administratorId);
+		administratorDao.deleteAdministratorById(administratorId);
 
 	}
 

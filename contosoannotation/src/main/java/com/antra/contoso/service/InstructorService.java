@@ -10,6 +10,6 @@ public interface InstructorService {
 	
 	List<Instructor> findAllInstructors();
 	
-	void deleteInstructorBtId(int instructorid);
+	void deleteInstructorById(int instructorid);
 
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,7 @@ import com.antra.contoso.domain.Enrollment;
 import com.antra.contoso.service.EnrollmentService;
 
 @Controller
-@RequestedMapping("/Enrollment")
+@RequestMapping("/Enrollment")
 public class EnrollmentController {
 	
 	@Autowired

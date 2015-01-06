@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
 	private UserDAO userDao;
 
 	@Override
-	public void saveUsers(User user) {
+	public void saveUser(User user) {
 		userDao.saveUser(user);
 
 	}
@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void deleteUsersById(int userId) {
+	public void deleteUserById(int userId) {
 		userDao.deleteUserById(userId);
 
 	}

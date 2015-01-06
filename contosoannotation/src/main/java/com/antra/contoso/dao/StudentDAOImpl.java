@@ -31,7 +31,7 @@ public class StudentDAOImpl implements StudentDAO
 	}
 
 	@Override
-	public List<Student> findAllStudent() 
+	public List<Student> findAllStudents() 
 	{
 		Criteria criteria = getSession().createCriteria(Student.class);
 		return (List<Student>) criteria.list();

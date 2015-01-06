@@ -8,7 +8,7 @@ public interface StudentDAO
 {
 	void saveStudent(Student student);
 	
-	List<Student> findAllStudent();
+	List<Student> findAllStudents();
 	
 	void deleteStudentById(int studentId);
 
