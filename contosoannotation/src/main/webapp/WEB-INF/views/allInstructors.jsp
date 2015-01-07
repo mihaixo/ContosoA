@@ -23,7 +23,7 @@ background-color: #C6C9C4;
 <td>First Name</td>
 <td>Last Name</td>
 <td>Gender</td>
-
+<td>Hired Date</td>
 
 </tr>
 <c:forEach items="${instructors}" var="instructor">
@@ -32,6 +32,7 @@ background-color: #C6C9C4;
 <td>${instructor.firstName}</td>
 <td>${instructor.lastName}</td>
 <td>${instructor.gender}</td>
+<td>${instructor.hiredDate}</td>
 
 
 </tr>

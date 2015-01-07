@@ -48,7 +48,7 @@ public class TestDAO {
 	
 	public void run()
 	{
-		Address add= new Address();
+		/*Address add= new Address();
 		add.setCity("Sterling");
 		add.setCountry("USA");
 		add.setStreet("VA");
@@ -178,15 +178,15 @@ public class TestDAO {
 			System.out.println();
 			System.out.println();
 					
-		}
+		}*/
 	}
 	
-	@Autowired
+	/*@Autowired
 	private SessionFactory sessionFactory;
 	
 	private Session getSession() {
 		Session session = sessionFactory.getCurrentSession();
 		return session;
-	}
+	}*/
 
 }

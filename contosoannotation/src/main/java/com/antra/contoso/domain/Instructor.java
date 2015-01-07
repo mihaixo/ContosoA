@@ -1,7 +1,9 @@
 package com.antra.contoso.domain;
 
 import java.sql.Blob;
-import java.util.Date;
+
+
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -31,7 +33,7 @@ public class Instructor
 	
 	@Column(name="HIRED_DATE")
 	//hybernate type conversion
-	private Date hireDate;
+	private Date hiredDate;
 	
 	@Column(name="PHOTO")
 	//hybernate type conversion
@@ -61,18 +63,19 @@ public class Instructor
 	public void setGender(char gender) {
 		this.gender = gender;
 	}
-	public Date getHireDate() {
-		return hireDate;
-	}
-	public void setHireDate(Date hireDate) {
-		this.hireDate = hireDate;
-	}
 	public Blob getPhotoBlob() {
 		return photoBlob;
 	}
 	public void setPhotoBlob(Blob photoBlob) {
 		this.photoBlob = photoBlob;
 	}
+	public Date getHiredDate() {
+		return hiredDate;
+	}
+	public void setHiredDate(Date hiredDate) {
+		this.hiredDate = hiredDate;
+	}
+	
 
 	
 	
