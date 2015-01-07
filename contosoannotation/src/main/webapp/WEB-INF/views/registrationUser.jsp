@@ -7,7 +7,7 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Role Registration Form</title>
+<title>User Registration Form</title>
 
 <style>
 .error {
@@ -19,24 +19,56 @@
 
 <body>
 
-	<h2>Role Creation Form</h2>
+	<h2>User Creation Form</h2>
 
-	<form:form method="POST" modelAttribute="role">
+	<form:form method="POST" modelAttribute="user">
 		<table>
 			<tr>
-				<td><label for="name">Role Name: </label></td>
-				<td><form:input path="roleName" id="roleName" /></td>
-				<td><form:errors path="roleName" cssClass="error" /></td>
+				<td><label for="name">User Name: </label></td>
+				<td><form:input path="userName" id="userName" /></td>
+				<td><form:errors path="userName" cssClass="error" /></td>
 			</tr>
 			<tr>
-				<td><label for="description">Description: </label></td>
-				<td><form:input path="description" id="description" /></td>
-				<td><form:errors path="description" cssClass="error" /></td>
+				<td><label for="passwordHash">Password Hash: </label></td>
+				<td><form:input path="passwordHash" id="passwordHash" /></td>
+				<td><form:errors path="passwordHash" cssClass="error" /></td>
 			</tr>
+			
+			<tr>
+				<td><label for="passwordSalt">Password Salt: </label></td>
+				<td><form:input path="passwordSalt" id="passwordSalt" /></td>
+				<td><form:errors path="passwordSalt" cssClass="error" /></td>
+			</tr>
+			
+			<tr>
+				<td><label for="email">Email: </label></td>
+				<td><form:input path="email" id="email" /></td>
+				<td><form:errors path="email" cssClass="error" /></td>
+			</tr>
+			
+			<tr>
+				<td><label for="createdDate">Created Date: </label></td>
+				<td><form:input path="createdDate" id="createdDate" /></td>
+				<td><form:errors path="createdDate" cssClass="error" /></td>
+			</tr>
+			
+			<tr>
+				<td><label for="lastLoginDate">Last Login Date: </label></td>
+				<td><form:input path="lastLoginDate" id="lastLoginDate" /></td>
+				<td><form:errors path="lastLoginDate" cssClass="error" /></td>
+			</tr>
+			<tr>
+				<td><label for="lastPasswordChange">Last Password Change Date: </label></td>
+				<td><form:input path="lastPasswordChange" id="lastPasswordChange" /></td>
+				<td><form:errors path="lastPasswordChange" cssClass="error" /></td>
+			</tr>
+			
+			
 
 			<tr>
-				<td colspan="3"><input type="submit" value="Create Role" /></td>
+				<td colspan="3"><input type="submit" value="Create user" /></td>
 			</tr>
+			
 		</table>
 	</form:form>
 	<br />
