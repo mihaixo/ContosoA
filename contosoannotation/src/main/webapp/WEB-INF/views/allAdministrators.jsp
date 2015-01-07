@@ -29,7 +29,7 @@ background-color: #C6C9C4;
 <c:forEach items="${administrators}" var="administrator">
 <tr>
 
-<td>${administrator.adminId}</td>
+<td>${administrator.administratorID}</td>
 <td>${administrator.firstName}</td>
 <td>${administrator.lastName}</td>
 
