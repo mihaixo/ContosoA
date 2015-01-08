@@ -31,7 +31,7 @@ background-color: #C6C9C4;
 <tr>
 <td>${enrollment.enrollmentId}</td>
 <td>${enrollment.course.courseId}</td>
-<td>${enrollment.student.studentId}</td>
+<td>${enrollment.student.studentID}</td>
 <td>${enrollment.grade}</td>
 
 </tr>

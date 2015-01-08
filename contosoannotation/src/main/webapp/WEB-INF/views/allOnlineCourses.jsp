@@ -26,7 +26,7 @@ background-color: #C6C9C4;
 </tr>
 <c:forEach items="${onlineCourses}" var="onlineCourse">
 <tr>
-<td>${onlineCourse.onlineCourseId}</td>
+<td>${onlineCourse.onlineCourseID}</td>
 <td>${onlineCourse.course.courseId}</td>
 <td>${onlineCourse.url}</td>
 

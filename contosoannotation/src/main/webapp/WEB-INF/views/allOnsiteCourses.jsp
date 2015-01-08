@@ -30,8 +30,8 @@ background-color: #C6C9C4;
 <c:forEach items="${onsiteCourses}" var="onsiteCourse">
 <tr>
 
-<td>${onsiteCourse.onsiteCourseId}</td>
-<td>${onsiteCourse.course}</td>
+<td>${onsiteCourse.onsiteCourseID}</td>
+<td>${onsiteCourse.course.courseId}</td>
 <td>${onsiteCourse.location}</td>
 <td>${onsiteCourse.days}</td>
 <td>${onsiteCourse.time}</td>

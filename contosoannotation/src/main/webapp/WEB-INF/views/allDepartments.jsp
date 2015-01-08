@@ -36,7 +36,7 @@ background-color: #C6C9C4;
 <td>${department.name}</td>
 <td>${department.budget}</td>
 <td>${department.startDate}</td>
-<td>${department.administratorId.administratorId}</td>
+<td>${department.administratorId.administratorID}</td>
 
 
 
