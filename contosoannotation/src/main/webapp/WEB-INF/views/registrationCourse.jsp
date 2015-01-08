@@ -39,15 +39,22 @@
 				<td><form:errors path="credits" cssClass="error" /></td>
 			</tr>
 			<tr>
-				<td><label for="departmentId">Department ID: </label></td>
-				<td><form:input path="departmentId" id="departmentId" /></td>
-				<td><form:errors path="departmentId" cssClass="error" /></td>
+				<%-- <td><label for="departmentId">Department ID: </label></td>
+				<td><form:input path="departmentId" id="departmentId" /></td> --%>
+				<td><lable for="department">Department: </lable></td>
+				<td><form:select path="department" id="department">
+					<%-- <form:options items="${departmentList}" label="ENGN"/> --%>
+					<c:forEach var="depart" items="${departmentList}">
+						<form:option value="${depart}" label="${depart.name}"/>
+					</c:forEach>
+					<form:errors path="department" cssClass="error" />
+				</form:select></td>
 			</tr>
-			<tr>
+			<%-- <tr>
 				<td><label for="instructorId">Instructor ID: </label></td>
 				<td><form:input path="instructorId" id="instructorId" /></td>
 				<td><form:errors path="instructorId" cssClass="error" /></td>
-			</tr>
+			</tr> --%>
 
 			<tr>
 				<td colspan="3"><input type="submit" value="Create Course" /></td>
