@@ -36,7 +36,7 @@ background-color: #C6C9C4;
 <td>${course.courseDescription}</td>
 <td>${course.credits}</td>
 <td>${course.department.departmentId}</td>
-<td>${course.instructor.instructorId}</td>
+<td>${course.instructor.instructorID}</td>
 
 </tr>
 </c:forEach>

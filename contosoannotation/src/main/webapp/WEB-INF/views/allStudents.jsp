@@ -30,7 +30,7 @@
 				<td>${students.lastName}</td>
 				<td>${students.firstName}</td>
 				<td>${students.enrollmentDate}</td>
-				<td>${address.address}</td>
+				<td>${students.address.addressId}</td>
 				</tr>
 			</c:forEach>
 		</table>
